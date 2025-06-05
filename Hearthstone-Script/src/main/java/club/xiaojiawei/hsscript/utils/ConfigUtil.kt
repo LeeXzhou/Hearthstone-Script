@@ -34,6 +34,7 @@ object ConfigUtil {
         ini
     }
 
+    @OptIn(kotlin.ExperimentalStdlibApi::class)
     private fun checkConfig(ini: Ini) {
         ConfigEnum.entries.forEach { entry ->
             if (ini.get(entry.group, entry.name) == null) {

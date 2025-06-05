@@ -18,7 +18,7 @@ class BaseInitializer : AbstractInitializer() {
         return snakeCase.split("_")
             .joinToString("") { it.lowercase().replaceFirstChar { char -> char.uppercase() } }
     }
-
+    @OptIn(kotlin.ExperimentalStdlibApi::class)
     override fun exec() {
         BaseData.enableChangeWeight = ConfigUtil.getBoolean(ConfigEnum.ENABLE_CHANGE_WEIGHT)
         ModeEnum.entries.forEach {

@@ -29,7 +29,7 @@ private fun setLogPath() {
         if (context is LoggerContext) {
             val logbackConfigFile = File("logback.xml")
             if (logbackConfigFile.exists()) {
-                val configurator = JoranConfigurator()
+                val configur    ator = JoranConfigurator()
                 configurator.context = context
                 context.reset()
                 configurator.doConfigure(logbackConfigFile)
